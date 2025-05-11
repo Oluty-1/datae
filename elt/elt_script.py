@@ -55,7 +55,7 @@ load_command = [
     'psql',
     '-h', dest_config['host'],
     '-p', dest_config['port'],
-    '-U', dest_config['user'],
+    '-Us', dest_config['user'],
     '-d', dest_config['dbname'],
     '-a', '-f', 'data_dump.sql'
 ]
@@ -66,4 +66,4 @@ subprocess.run(load_command, env=subprocess_env, check=True)
 
 
 print("Ending ELT script...")
-    
+    #
